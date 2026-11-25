@@ -3,7 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 
 export function Services() {
   return (
-    <section id="services" className="py-24 px-5 sm:px-8 max-w-7xl mx-auto hairline-top">
+    <section id="services" className="py-24 px-5 sm:px-8 max-w-[100rem] mx-auto hairline-top">
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div>

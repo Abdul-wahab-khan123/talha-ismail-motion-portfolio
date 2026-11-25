@@ -38,7 +38,7 @@ export function SelectedWork({ projects }: SelectedWorkProps) {
   };
 
   return (
-    <section id="work" className="py-24 px-5 sm:px-8 max-w-7xl mx-auto">
+    <section id="work" className="py-24 px-5 sm:px-8 max-w-[100rem] mx-auto">
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 hairline-bottom pb-8">
         <div>

@@ -52,7 +52,7 @@ export function Navbar({ onOpenShowreel }: NavbarProps) {
           : 'bg-transparent py-6'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between">
+      <div className="max-w-[100rem] mx-auto px-5 sm:px-8 flex items-center justify-between">
         {/* Left: Brand Identity */}
         <a
           href="#"

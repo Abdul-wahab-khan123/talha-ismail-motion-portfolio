@@ -3,7 +3,7 @@ import { Quote } from 'lucide-react';
 
 export function About() {
   return (
-    <section id="about" className="py-24 px-5 sm:px-8 max-w-7xl mx-auto hairline-top">
+    <section id="about" className="py-24 px-5 sm:px-8 max-w-[100rem] mx-auto hairline-top">
       {/* Editorial Section Header */}
       <div className="flex items-center gap-2 text-xs font-mono text-accent uppercase tracking-wider mb-8">
         <span className="w-1.5 h-1.5 rounded-full bg-accent" />

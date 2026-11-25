@@ -17,7 +17,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-5 sm:px-8 max-w-7xl mx-auto hairline-top">
+    <section id="contact" className="py-24 px-5 sm:px-8 max-w-[100rem] mx-auto hairline-top">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         {/* Left Column: Bold Headline & Call to Action (7 cols) */}
         <div className="lg:col-span-7">

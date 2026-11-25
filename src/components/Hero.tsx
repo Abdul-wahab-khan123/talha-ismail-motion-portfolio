@@ -44,7 +44,7 @@ export function Hero({ onOpenShowreel }: HeroProps) {
   };
 
   return (
-    <section className="relative min-h-[92vh] lg:min-h-screen pt-28 pb-16 px-5 sm:px-8 flex flex-col justify-between max-w-7xl mx-auto studio-grid-bg">
+    <section className="relative min-h-[92vh] lg:min-h-screen pt-28 pb-16 px-5 sm:px-8 flex flex-col justify-between max-w-[100rem] mx-auto studio-grid-bg">
       {/* Top Editorial Bar */}
       <div className="flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-subtext hairline-bottom pb-4">
         <div className="flex items-center gap-3">

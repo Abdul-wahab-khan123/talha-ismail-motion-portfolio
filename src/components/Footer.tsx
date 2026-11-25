@@ -7,7 +7,7 @@ export function Footer() {
 
   return (
     <footer className="hairline-top bg-bg-secondary py-10 sm:py-12 px-5 sm:px-8 text-xs font-mono text-subtext">
-      <div className="max-w-7xl mx-auto flex flex-col gap-8">
+      <div className="max-w-[100rem] mx-auto flex flex-col gap-8">
         {/* Top Row: Brand, Descriptor, Studio Location & Back to Top */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 hairline-bottom">
           {/* Brand Identity & Role */}
