@@ -186,7 +186,7 @@ export const PROJECTS: Project[] = [
     fps: 30,
     tools: ['After Effects', 'Illustrator', 'Photoshop'],
     thumbnail: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1200&auto=format&fit=crop',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-abstract-animation-of-blue-and-red-lights-42995-large.mp4',
+    videoUrl: '/videos/6.mp4',
     aspectRatio: 'tall',
     overview: 'A creative sandbox dissecting optical illusions, moiré patterns, recursive loop mechanics, and glitch aesthetics for progressive brand experiences.',
     challenge: 'Breaking conventional design boundaries while maintaining aesthetic polish, visual cohesion, and reproducible project templates.',
