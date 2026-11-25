@@ -27,6 +27,9 @@ dist-ssr/
 .vercel/
 .cache/
 
+# Scripts and scratch
+*.ps1
+
 # Editor and OS
 .vscode/
 .idea/

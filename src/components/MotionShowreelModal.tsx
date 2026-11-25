@@ -83,7 +83,7 @@ export function MotionShowreelModal({ isOpen, onClose }: MotionShowreelModalProp
           {/* Main Video Viewport */}
           <div className="relative aspect-video bg-black overflow-hidden">
             <video
-              src="https://assets.mixkit.co/videos/preview/mixkit-animation-of-futuristic-devices-99786-large.mp4"
+              src="/videos/7.mp4"
               poster="https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1200&auto=format&fit=crop"
               className="w-full h-full object-cover"
               autoPlay
