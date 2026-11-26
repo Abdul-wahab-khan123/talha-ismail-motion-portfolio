@@ -53,6 +53,7 @@ export function ProjectCard({ project, layoutVariant, onSelect }: ProjectCardPro
               <video
                 ref={videoRef}
                 src={project.videoUrl}
+                poster={project.thumbnail}
                 muted
                 loop
                 playsInline
@@ -146,6 +147,7 @@ export function ProjectCard({ project, layoutVariant, onSelect }: ProjectCardPro
           <video
             ref={videoRef}
             src={project.videoUrl}
+            poster={project.thumbnail}
             muted
             loop
             playsInline

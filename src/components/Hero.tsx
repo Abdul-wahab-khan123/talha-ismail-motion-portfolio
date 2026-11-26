@@ -191,7 +191,7 @@ export function Hero({ onOpenShowreel }: HeroProps) {
                 <video
                   ref={videoRef}
                   src="/videos/7.mp4"
-                  poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop"
+                  poster="/images/video-thumbnails/showreel-07.jpg"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loop
                   muted={isMuted}
@@ -202,7 +202,7 @@ export function Hero({ onOpenShowreel }: HeroProps) {
               ) : (
                 <div className="relative w-full h-full overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop"
+                    src="/images/video-thumbnails/showreel-07.jpg"
                     alt="Kinetic Motion Preview"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />

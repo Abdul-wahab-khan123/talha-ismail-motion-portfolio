@@ -84,7 +84,7 @@ export function MotionShowreelModal({ isOpen, onClose }: MotionShowreelModalProp
           <div className="relative aspect-video bg-black overflow-hidden">
             <video
               src="/videos/7.mp4"
-              poster="https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1200&auto=format&fit=crop"
+              poster="/images/video-thumbnails/showreel-07.jpg"
               className="w-full h-full object-cover"
               autoPlay
               loop
