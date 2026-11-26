@@ -40,7 +40,7 @@ export function ProjectModal({ project, onClose, onNavigate }: ProjectModalProps
         role="dialog"
         aria-modal="true"
         aria-labelledby="project-modal-title"
-        className="fixed inset-0 z-[70] flex items-center justify-center p-3 sm:p-6 lg:p-8 bg-black/90 backdrop-blur-md overflow-y-auto"
+        className="fixed inset-0 z-[70] flex items-center justify-center p-3 pt-16 sm:p-6 lg:p-8 bg-black/90 backdrop-blur-md overflow-y-auto"
         onClick={onClose}
       >
         <motion.div
@@ -48,21 +48,21 @@ export function ProjectModal({ project, onClose, onNavigate }: ProjectModalProps
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.98, opacity: 0, y: 10 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="relative w-full max-w-5xl bg-bg-secondary hairline-border rounded-xl overflow-hidden shadow-2xl my-auto text-paper flex flex-col max-h-[90vh]"
+          className="relative w-full max-w-5xl bg-bg-secondary hairline-border rounded-xl overflow-hidden shadow-2xl my-auto text-paper flex flex-col max-h-[88vh] sm:max-h-[90vh]"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Studio Header Bar */}
-          <div className="px-6 py-4 bg-bg-card hairline-bottom flex items-center justify-between sticky top-0 z-40">
-            <div className="flex items-center gap-3 text-xs font-mono">
-              <span className="w-2 h-2 rounded-full bg-accent" />
-              <h2 id="project-modal-title" className="text-paper font-bold uppercase text-xs font-mono">
+          <div className="px-4 py-3 sm:px-6 sm:py-4 bg-bg-card hairline-bottom flex items-center justify-between sticky top-0 z-50 gap-2">
+            <div className="flex items-center gap-2 sm:gap-3 text-xs font-mono min-w-0 flex-1">
+              <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
+              <h2 id="project-modal-title" className="text-paper font-bold uppercase text-xs font-mono truncate">
                 {project.title}
               </h2>
-              <span className="text-mutedText">·</span>
-              <span className="text-accent uppercase">{project.categoryDisplay}</span>
+              <span className="text-mutedText hidden sm:inline">·</span>
+              <span className="text-accent uppercase text-[11px] sm:text-xs hidden sm:inline whitespace-nowrap">{project.categoryDisplay}</span>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
               <button
                 onClick={() => onNavigate('prev')}
                 className="p-1.5 rounded bg-bg-secondary hairline-border text-subtext hover:text-paper hover:border-accent transition-colors"
@@ -79,7 +79,7 @@ export function ProjectModal({ project, onClose, onNavigate }: ProjectModalProps
               </button>
               <button
                 onClick={onClose}
-                className="p-1.5 rounded bg-bg-secondary hairline-border text-subtext hover:text-paper hover:border-accent transition-colors ml-2"
+                className="p-1.5 rounded bg-bg-secondary hairline-border text-subtext hover:text-paper hover:border-accent transition-colors ml-1 sm:ml-2"
                 title="Close (ESC)"
               >
                 <X className="w-4 h-4" />
@@ -88,7 +88,7 @@ export function ProjectModal({ project, onClose, onNavigate }: ProjectModalProps
           </div>
 
           {/* Modal Scrollable Body */}
-          <div className="overflow-y-auto p-6 sm:p-10 space-y-10">
+          <div className="overflow-y-auto p-4 sm:p-8 lg:p-10 space-y-8 sm:space-y-10">
             {/* Project Hero Media */}
             <div className="relative rounded-lg overflow-hidden bg-black hairline-border aspect-video">
               {project.videoUrl ? (
@@ -98,7 +98,7 @@ export function ProjectModal({ project, onClose, onNavigate }: ProjectModalProps
                   controls
                   autoPlay
                   playsInline
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover relative z-10"
                   onError={(e) => {
                     // Gracefully fallback to poster image if stream blocked
                     const target = e.currentTarget;
@@ -109,7 +109,7 @@ export function ProjectModal({ project, onClose, onNavigate }: ProjectModalProps
               <img
                 src={project.thumbnail}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
 

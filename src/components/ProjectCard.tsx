@@ -54,18 +54,19 @@ export function ProjectCard({ project, layoutVariant, onSelect }: ProjectCardPro
                 ref={videoRef}
                 src={project.videoUrl}
                 poster={project.thumbnail}
+                preload="none"
                 muted
                 loop
                 playsInline
                 onError={() => setVideoError(true)}
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none ${
                   isHovered ? 'opacity-100' : 'opacity-0'
                 }`}
               />
             )}
 
             {/* Viewfinder indicator overlay */}
-            <div className="absolute top-3.5 left-3.5 flex items-center gap-2 px-2.5 py-1 rounded bg-bg-primary/85 backdrop-blur text-[11px] font-mono text-paper hairline-border">
+            <div className="absolute top-3.5 left-3.5 flex items-center gap-2 px-2.5 py-1 rounded bg-bg-card hairline-border text-[11px] font-mono text-paper shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-accent" />
               <span>{project.number}</span>
               <span className="text-mutedText">/</span>
@@ -148,24 +149,25 @@ export function ProjectCard({ project, layoutVariant, onSelect }: ProjectCardPro
             ref={videoRef}
             src={project.videoUrl}
             poster={project.thumbnail}
+            preload="none"
             muted
             loop
             playsInline
             onError={() => setVideoError(true)}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none ${
               isHovered ? 'opacity-100' : 'opacity-0'
             }`}
           />
         )}
 
         {/* Top Badges */}
-        <div className="absolute top-3 left-3 flex items-center gap-2 px-2.5 py-1 rounded bg-bg-primary/85 backdrop-blur text-[10px] font-mono text-paper hairline-border">
+        <div className="absolute top-3 left-3 flex items-center gap-2 px-2.5 py-1 rounded bg-bg-card hairline-border text-[10px] font-mono text-paper shadow-sm">
           <span className="text-accent font-bold">{project.number}</span>
           <span className="text-mutedText">·</span>
           <span className="whitespace-nowrap">{project.fps} FPS</span>
         </div>
 
-        <div className="absolute top-3 right-3 px-2 py-1 rounded bg-bg-primary/85 backdrop-blur text-[10px] font-mono text-subtext hairline-border whitespace-nowrap">
+        <div className="absolute top-3 right-3 px-2 py-1 rounded bg-bg-card hairline-border text-[10px] font-mono text-subtext whitespace-nowrap shadow-sm">
           {project.duration}
         </div>
 

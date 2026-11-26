@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
     client: 'Studio Prototype / Concept Series',
     role: 'Lead 2D Animator & Rig Designer',
     shortDesc: 'Handcrafted character rigging with expressive micro-acting and weight-driven locomotion.',
-    duration: '00:45',
+    duration: '00:34',
     fps: 24,
     tools: ['After Effects', 'DUIK Bassel', 'Illustrator', 'Photoshop'],
     // Curated high quality cinematic motion loop
@@ -27,7 +27,7 @@ export const PROJECTS: Project[] = [
       'Annotated timing charts at 24fps with hand-keyed anticipation arcs',
       'Secondary momentum passes on hair, fabric, and character props'
     ],
-    finalResult: 'Delivered an energetic 45-second commercial character reel featuring seamless loops and high visual appeal across broadcast and mobile formats.',
+    finalResult: 'Delivered an energetic 34-second commercial character reel featuring seamless loops and high visual appeal across broadcast and mobile formats.',
     stats: [
       { label: 'Keyframes Keyed', value: '1,420+' },
       { label: 'Framerate', value: '24 FPS' },
@@ -114,7 +114,7 @@ export const PROJECTS: Project[] = [
     client: 'FinTech Platform Concept',
     role: 'Visual Scriptwriter & Animator',
     shortDesc: 'Converting complex algorithmic flows into digestible visual metaphors and clean pacing.',
-    duration: '01:15',
+    duration: '01:08',
     fps: 30,
     tools: ['After Effects', 'Illustrator', 'Premiere Pro'],
     thumbnail: '/images/video-thumbnails/project-04.jpg',
@@ -148,7 +148,7 @@ export const PROJECTS: Project[] = [
     client: 'Indie Game Narrative Sequence',
     role: 'Traditional Animator & Colorist',
     shortDesc: 'Hand-drawn organic fluid splashes, smoke plumes, and dynamic physical impacts.',
-    duration: '00:25',
+    duration: '00:20',
     fps: 12,
     tools: ['Photoshop (Timeline)', 'After Effects', 'Premiere Pro'],
     thumbnail: '/images/video-thumbnails/project-05.jpg',

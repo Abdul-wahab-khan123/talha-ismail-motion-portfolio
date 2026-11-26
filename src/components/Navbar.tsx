@@ -15,22 +15,35 @@ export function Navbar({ onOpenShowreel }: NavbarProps) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 40);
+
+      // When near top of the page (Hero section), reset active state
+      if (currentScrollY < 300) {
+        setActiveSection('hero');
+        return;
+      }
 
       // Section tracking for nav highlighting
       const sections = ['work', 'about', 'services', 'experience', 'process', 'contact'];
+      let matchingSection = 'hero';
+
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
         if (el) {
           const rect = el.getBoundingClientRect();
-          if (rect.top <= 200 && rect.bottom >= 200) {
-            setActiveSection(sectionId);
+          // Check if section is currently active in viewport
+          if (rect.top <= 240 && rect.bottom >= 120) {
+            matchingSection = sectionId;
             break;
           }
         }
       }
+
+      setActiveSection(matchingSection);
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -48,7 +61,7 @@ export function Navbar({ onOpenShowreel }: NavbarProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
-          ? 'bg-bg-primary/92 backdrop-blur-md hairline-bottom py-3.5 shadow-sm'
+          ? 'bg-bg-primary backdrop-blur-md hairline-bottom py-3.5 shadow-sm'
           : 'bg-transparent py-6'
       }`}
     >
@@ -136,7 +149,7 @@ export function Navbar({ onOpenShowreel }: NavbarProps) {
 
       {/* Mobile & Tablet Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[61px] bg-bg-primary/95 backdrop-blur-xl hairline-bottom px-6 py-8 flex flex-col gap-6 shadow-2xl animate-in slide-in-from-top-4 duration-200">
+        <div className="lg:hidden fixed inset-x-0 top-[61px] bg-bg-primary backdrop-blur-xl hairline-bottom px-6 py-8 flex flex-col gap-6 shadow-2xl animate-in slide-in-from-top-4 duration-200">
           <div className="flex flex-col gap-4 text-base font-display font-medium">
             {navLinks.map((link) => (
               <a
